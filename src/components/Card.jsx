@@ -19,7 +19,7 @@ const Card = ({title, content, url, index, like,dislike, handlelike,handledislik
           
             <p className="font-bold text-3xl text-center mb-5 text-gray-500 uppercase">{title}</p>
           
-            <div className="pl-10 pr-8 mb-4">
+            <div className="pl-10 pr-8 mb-4 break-words">
               <p>{content}</p>
             </div>
           
