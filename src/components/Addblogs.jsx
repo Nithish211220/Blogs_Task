@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { PiGitlabLogoSimpleFill } from "react-icons/pi";
+import { Navigate, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 function Addblogs() {
+  const navigate=useNavigate();
   const [title,settitle]=useState('')
     const [url,seturl]=useState('');
     const [content,setcontent]=useState('');
@@ -30,6 +33,12 @@ function Addblogs() {
         seturl('');
         setcontent('');
         settitle('');
+        Swal.fire({
+          title: "Successfully Added!",
+          text: "You Can Visit To Blogs Page",
+          icon: "success"
+        });
+        navigate('/');
     }
 
 
